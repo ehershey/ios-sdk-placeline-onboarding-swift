@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HyperTrack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        HyperTrack.initialize(YOUR_PUBLISHABLE_KEY)
+        
+        HyperTrack.requestAlwaysLocationAuthorization { (authorized) in
+            //handle authorization
+        }
+        HyperTrack.requestMotionAuthorization()
+        HyperTrack.registerForNotifications()
+
         return true
     }
 
@@ -41,6 +50,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        HyperTrack.didRegisterForRemoteNotificationsWithDeviceToken(deviceToken: deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        if (HyperTrack.isHyperTrackNotification(userInfo: userInfo)){
+            HyperTrack.didReceiveRemoteNotification(userInfo: userInfo)
+        }
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        HyperTrack.didFailToRegisterForRemoteNotificationsWithError(error: error)
+    }
 
 }
 

@@ -7,19 +7,51 @@
 //
 
 import UIKit
+import HyperTrack
 
 class ViewController: UIViewController {
-
+    fileprivate var contentView: HTMapContainer!
+    fileprivate var placelineUseCase: HTPlaceLineUseCase?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        contentView = HTMapContainer(frame: .zero)
+        view.addSubview(contentView)
+        contentView.edges()
+        //If you already have a HTUser you can directly call `enablePlacelineUseCase()`
+        if let _ = HyperTrack.getUserId() {
+            enablePlacelineUseCase()
+        } else {
+            HyperTrack.getOrCreateUser(name: NAME, phone: MOBILE-NUMBER, uniqueId: UNIQUE-ID) { [weak self] (user, error) in
+                if let _ = user {
+                   self?.enablePlacelineUseCase()
+                } else {
+                    //Handle error
+                }
+            }
+
+        }
     }
 
+    func enablePlacelineUseCase() {
+        placelineUseCase = HTPlaceLineUseCase(mapDelegate: contentView)
+        placelineUseCase?.delegate = self
+        contentView.setBottomViewWithUseCase(placelineUseCase!)
+        placelineUseCase?.update()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        placelineUseCase?.update()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
+extension ViewController: HTBaseUseCaseDelegate {
+    func showLoader(_ show: Bool) {
+        //Show loader
+    }
+}
