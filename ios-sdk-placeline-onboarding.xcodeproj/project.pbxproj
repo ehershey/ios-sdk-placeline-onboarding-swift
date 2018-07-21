@@ -179,7 +179,6 @@
 				B7A13A1F20ADB4A0004D9AE7 /* Frameworks */,
 				B7A13A2020ADB4A0004D9AE7 /* Resources */,
 				4EDB3E4834C2B5027E786D17 /* [CP] Embed Pods Frameworks */,
-				958375825B05910AE7D75037 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,8 +197,6 @@
 				B7A13A3220ADB4A2004D9AE7 /* Sources */,
 				B7A13A3320ADB4A2004D9AE7 /* Frameworks */,
 				B7A13A3420ADB4A2004D9AE7 /* Resources */,
-				44D3C148976E266F9A63DA87 /* [CP] Embed Pods Frameworks */,
-				24659495C7E62C26836F861B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,8 +216,6 @@
 				B7A13A3D20ADB4A2004D9AE7 /* Sources */,
 				B7A13A3E20ADB4A2004D9AE7 /* Frameworks */,
 				B7A13A3F20ADB4A2004D9AE7 /* Resources */,
-				C53D4865E4F395AAD95BFFE7 /* [CP] Embed Pods Frameworks */,
-				A2103096B2F9A88D144BBAFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,21 +324,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		24659495C7E62C26836F861B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk-placeline-onboardingTests/Pods-ios-sdk-placeline-onboardingTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3C346E675AB92F379FE66458 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,21 +340,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		44D3C148976E266F9A63DA87 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk-placeline-onboardingTests/Pods-ios-sdk-placeline-onboardingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4EDB3E4834C2B5027E786D17 /* [CP] Embed Pods Frameworks */ = {
@@ -419,51 +384,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		958375825B05910AE7D75037 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk-placeline-onboarding/Pods-ios-sdk-placeline-onboarding-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2103096B2F9A88D144BBAFD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk-placeline-onboardingUITests/Pods-ios-sdk-placeline-onboardingUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C53D4865E4F395AAD95BFFE7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk-placeline-onboardingUITests/Pods-ios-sdk-placeline-onboardingUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -650,14 +570,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ios-sdk-placeline-onboarding/ios-sdk-placeline-onboarding.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4925W78YQ;
+				DEVELOPMENT_TEAM = SG974AQ545;
 				INFOPLIST_FILE = "ios-sdk-placeline-onboarding/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hyperTrack.ios-sdk-placeline-onboarding";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ernie.ios-sdk-placeline-onboarding";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -671,14 +591,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ios-sdk-placeline-onboarding/ios-sdk-placeline-onboarding.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4925W78YQ;
+				DEVELOPMENT_TEAM = SG974AQ545;
 				INFOPLIST_FILE = "ios-sdk-placeline-onboarding/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hyperTrack.ios-sdk-placeline-onboarding";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ernie.ios-sdk-placeline-onboarding";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -9,10 +9,15 @@
 import UIKit
 import HyperTrack
 
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var YOUR_PUBLISHABLE_KEY = "pk_test_ed654ba2aaa2b419141001528071c91481802014"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

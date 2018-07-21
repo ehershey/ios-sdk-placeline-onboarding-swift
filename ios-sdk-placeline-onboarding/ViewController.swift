@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     fileprivate var contentView: HTMapContainer!
     fileprivate var placelineUseCase: HTPlaceLineUseCase?
     
+    var NAME = "Ernie"
+    var MOBILE_NUMBER = "646-722-0190"
+    var UNIQUE_ID = "Ernie2018072000"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView = HTMapContainer(frame: .zero)
@@ -22,7 +26,7 @@ class ViewController: UIViewController {
         if let _ = HyperTrack.getUserId() {
             enablePlacelineUseCase()
         } else {
-            HyperTrack.getOrCreateUser(name: NAME, phone: MOBILE-NUMBER, uniqueId: UNIQUE-ID) { [weak self] (user, error) in
+            HyperTrack.getOrCreateUser(name: NAME, phone: MOBILE_NUMBER, uniqueId: UNIQUE_ID) { [weak self] (user, error) in
                 if let _ = user {
                    self?.enablePlacelineUseCase()
                 } else {

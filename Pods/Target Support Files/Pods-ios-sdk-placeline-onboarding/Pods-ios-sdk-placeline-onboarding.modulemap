@@ -1,0 +1,6 @@
+framework module Pods_ios_sdk_placeline_onboarding {
+  umbrella header "Pods-ios-sdk-placeline-onboarding-umbrella.h"
+
+  export *
+  module * { export * }
+}
